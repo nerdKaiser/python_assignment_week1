@@ -7,4 +7,23 @@ def calculator():
     operation = input("Enter the operator (+, -, *, /): ")
     num2 = float(input("Enter the second number:"))
     
-    if 
+    if operation == '+' :
+        result = num1 + num2
+    elif operation == '-':
+        result = num1 - num2
+    elif operation == '*':
+        result = num1 * num2
+    elif operation == '/':
+       if num2 != 0:
+           result = num1 / num2
+       else:
+           print("Error: Cannot divide by 0")
+           return
+    else:
+        print("Invalid operation request")
+        return
+    
+    print(f"{num1} {operation} {num2} = {result}")
+       
+calculator();
+
